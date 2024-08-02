@@ -55,6 +55,8 @@ INSTALLED_APPS = [
 
     'mathfilters',
 
+    'bootstrap5',
+
 ]
 
 # recaptcha configuration
