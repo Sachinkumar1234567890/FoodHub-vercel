@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import dj_database_url 
 from pathlib import Path
 import os
 from decouple import config
@@ -28,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',".vercel.app"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -105,7 +106,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ecommerce.wsgi.app'
+WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
 # Database
@@ -121,6 +122,9 @@ DATABASES = {
         'PORT': config('PORT')
     }
 }
+
+DATABASES['default'] = dj_database_url.parse("postgresql://my_project_uph6_user:SvgFx789ogmc4SwsTGDeFW8Tu5LMURvW@dpg-cqmtc0tds78s739470i0-a.oregon-postgres.render.com/my_project_uph6")
+# 
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -164,7 +168,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static/'
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
