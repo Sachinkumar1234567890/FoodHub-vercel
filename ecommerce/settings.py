@@ -196,3 +196,5 @@ EMAIL_USE_TLS = True
 
 RAZORPAY_KEY_ID = config("RAZORPAY_KEY_ID")
 RAZORPAY_SECRET_KEY = config("RAZORPAY_SECRET_KEY")
+
+# added some fuctionality
