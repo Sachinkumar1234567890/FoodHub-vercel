@@ -29,7 +29,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
+=======
+ALLOWED_HOSTS = ["127.0.0.1",".vercel.app"]
+>>>>>>> 41fe6a23864e777ea59055c67a1338d685d6b489
 
 
 # Application definition
@@ -55,6 +59,8 @@ INSTALLED_APPS = [
     'order',
 
     'mathfilters',
+
+    'bootstrap5',
 
 ]
 
