@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'bootstrap5',
 
     "whitenoise.runserver_nostatic",
-    "django.contrib.staticfiles",
 
 ]
 
