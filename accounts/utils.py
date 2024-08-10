@@ -15,9 +15,8 @@ def detectUser(user):
     elif user.role == 2:
         redirectUrl= 'userdashboard'
         return redirectUrl
-    elif user.role == None and user.is_superadmin:
-        redirectUrl= '/admin'
-        return redirectUrl
+    else:
+        return messages("user not exists")
     
 
 #For email sending for user
