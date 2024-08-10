@@ -1,6 +1,6 @@
-{% load static %}
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block content %}
 
@@ -109,9 +109,10 @@
 					</div>
 				</div>
 			</div>
+			<div>
+				{% include 'includes/alerts.html' %}
+			</div>
 		</div>
-		<div>
-			{% include 'includes/alerts.html' %}
-		</div>
+
 {% endblock%}
 

@@ -58,7 +58,7 @@ def UserRegistration(request):
             email_template = 'accounts/emails/account_verification_email.html'
             send_verification_email(request, user, mail_subject, email_template)
 
-            messages.success(request,"Hey thanks for Register...!")
+            messages.success(request,"Registered...Check mail and activate your account...!")
             return redirect('user_login')
         else:
             print("error occured")
@@ -128,7 +128,7 @@ def user_login(request):
         password=request.POST.get("password")
         user=authenticate(email=email,password=password)
         if user:
-            if user.is_active:
+            if  user.is_active:
                 login(request,user)
                 messages.success(request,"Login successful")
                 return redirect("Myaccount")

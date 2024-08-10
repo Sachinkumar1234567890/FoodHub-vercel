@@ -16,7 +16,7 @@ def detectUser(user):
         redirectUrl= 'userdashboard'
         return redirectUrl
     else:
-        return messages("user not exists")
+        return messages("User not exists")
     
 
 #For email sending for user
