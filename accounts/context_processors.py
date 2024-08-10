@@ -5,7 +5,6 @@ def get_vendor(request):
     try:
         vendor = User.objects.get(user=request.user)
         profile = UserProfile.objects.get(user=request.user) 
-        u=User.objects.get(user=request.user)
     except:
         vendor = None
         profile = None
