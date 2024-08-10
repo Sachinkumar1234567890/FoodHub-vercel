@@ -154,9 +154,9 @@ def Myaccount(request):
 @login_required(login_url='user_login')
 @user_passes_test(check_role_customer)
 def userdashboard(request):
+    data=Order.objects.all()
 
-
-    return render(request,"userdashboard.html",{})
+    return render(request,"userdashboard.html",{'data':data})
 
 @login_required(login_url='user_login')
 @user_passes_test(check_role_vendor)
